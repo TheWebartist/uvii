@@ -1,0 +1,29 @@
+<footer>
+    <div class="logo-place">
+        <span>
+            {% if include.locale == "en" %}
+            Made with love by
+            {% else %}
+            Pensée et développée par
+            {% endif %}
+        </span>
+        <img src="{{ '/assets/vectors/logo-ucaya.svg' | relative_url }}" class="logo-ucaya">
+    </div>
+
+    <section class="footer-infos">
+        <p class="copyright">
+            {% if include.locale == "en" %}
+            &copy; 2007/2017 - UCAYA - All rights reserved. 
+            {% else %}
+            &copy; 2007/2017 - UCAYA - Tous droits réservés.
+            {% endif %}
+        </p>
+        
+        <menu class="lang-menu {{ include.locale }}">
+            <a class="fr-link" href="{{ '/' | relative_url }}">FR</a>
+            <span>|</span>
+            <a class="en-link" href="{{ '/en/' | relative_url }}">EN</a>
+        </menu>
+    </section>
+
+</footer>
