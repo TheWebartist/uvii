@@ -11,7 +11,7 @@ layout: page
 
 <article id="uvii-presentation">
 <div class="article-content">
-<img src="../assets/img/uvii-interface.png" srcset="../assets/img/uvii-interface@2x.png 2x, ../assets/img/uvii-interface@3x.png 3x" />
+<img src="{{ '/assets/img/uvii-interface.png' | relative_url }}" srcset="{{ '/assets/img/uvii-interface@2x.png' | relative_url }} 2x, {{ '/assets/img/uvii-interface@3x.png' | relative_url }} 3x" />
 <h3>Pour votre catalogue de contenus protégés par DRM PlayReady</h3>
 <section id="advantages">
 <div id="plateform">
@@ -24,7 +24,7 @@ layout: page
 </ul>
 </div>
 <div id="features">
-<img alt="" src="{{ '/assets/vectors/ico-app.svg' | relative_url }}" />
+<img alt="" src="{{ '/assets/vectors/ico-play.svg' | relative_url }}" />
 <h4>
 <span>Offrez à vos clients la possibilité </span><span>de regarder maintenant</span>
 <span>ou de télécharger pour plus tard</span>
