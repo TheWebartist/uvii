@@ -20,9 +20,15 @@
         </p>
         
         <menu class="lang-menu {{ include.locale }}">
-            <a class="fr-link" href="{{ '/' | relative_url }}">FR</a>
+            {% if include.locale == "en" %}
+            <a class="lang-link fr-link" href="{{ '/' | relative_url }}">FR</a>
             <span>|</span>
-            <a class="en-link" href="{{ '/en/' | relative_url }}">EN</a>
+            <span class="lang-link en-link">EN</span>
+            {% else %}
+            <span class="lang-link fr-link">FR</span>
+            <span>|</span>
+            <a class="lang-link en-link" href="{{ '/en/' | relative_url }}">EN</a>
+            {% endif %}
         </menu>
     </section>
 

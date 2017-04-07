@@ -10,6 +10,7 @@ $lightAccentColor: #FFFFFF;
 $darkTextColor: #1d1e2a;
 $textColor: #575756;
 $footerTextColor: #787778;
+$footerSecondaryColor: #B2B2B2;
 $lightTextColor: #FFFFFF;
 $baseMargin: 12px;
 $headerPadding: 56px;
@@ -168,7 +169,7 @@ footer {
     position: relative;
     .logo-place {
         span {
-            color: #b2b2b2;
+            color: $footerSecondaryColor;
             display: block;
             font-size: 0.75em;
         }
@@ -190,25 +191,19 @@ footer {
     .lang-menu {
         margin: 0 $baseMargin / 2;
         padding: 0;
-
-        a {
+        .lang-link {
             color: $footerTextColor;
             margin: 0 $baseMargin / 2;
         }
-        &, &.fr {
-            .fr-link {
-                color: $lightTextColor;
+        a {
+            transition: color 0.3s ease-in-out;
+            &:hover, &:focus {
+                color: $footerSecondaryColor;
             }
         }
-        &.en {
-            .fr-link {
-                color: $footerTextColor;
-            }
-            .en-link {
-                color: $lightTextColor;
-            }
+        span.lang-link {
+            color: $lightTextColor;
         }
-
     }
 }
 
