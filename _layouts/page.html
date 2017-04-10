@@ -51,6 +51,9 @@
       window.Intercom("boot", {
         app_id: "{{ site.intercom_app_id }}"
       });
+      window.intercomSettings = {
+        referer: location.toString()
+      }
     </script>
   {% endif %}
   </body>
